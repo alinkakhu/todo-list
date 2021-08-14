@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .todo{
+            position:absolute;
+            top: 250px;
+            left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+        }
+        body{
+            background-color: rgba(245, 222, 179, 0.007);
+        }
+        .header{
+            background-color: lightblue;
+            width: 500px;
+            height: 70px;
+            text-align: center;
+           box-shadow: 4px 4px  5px rgba(82,82,82, .4);
+            padding: 40px;
+            background-image:linear-gradient(340deg,#045de9 0%,#09c6f9 100%);
+            border-radius: 5px 5px;
+        }
+        .list{
+            background-color: white;
+        text-align: center;
+            box-shadow: 4px 4px  5px rgba(82,82,82, .4);
+            padding:20px 0;
+        }
+        li{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+           padding: 10px;
+           align-items: center;
+           margin: 10px;
+           background-color: whitesmoke;
+           font-family: 'Roboto';
+          
+        }
+        .toClear{
+            display: inline-block;
+            
+        }
+      ul {
+          text-align: center;
+      }
+      h1{
+          padding-bottom: 5px;
+          color: white;
+          font-family: 'Roboto';
+          font-weight: 500;
+          text-transform: uppercase;
+      }
+      input{
+          height: 30px;
+          width: 300px;
+          
+      }
+      .add{
+          background: white;
+border: 2px solid white;
+border-radius: 10%;
+height: 31px;
+width: 50px;
+
+      }
+      .list h1{
+          color: black;
+          font-size: 16px;
+          font-weight: 800;
+          padding-top: 10px;
+      }
+      .list p{
+          color: lightblue;
+      }
+      .tools button{
+          padding:5px 10px;
+          border: none;
+          background-color: transparent;
+
+      }
+      .complete{
+          color: green;
+      }
+      .delete{
+          color: tomato;
+      }
+      .edit{
+          color: lightskyblue;
+      }
+      .tools button:hover{
+          cursor: pointer;
+      }
+      .done{
+          text-decoration: line-through;
+          font-style: italic;
+      }
+      .popup{
+
+          display: none;
+          /* display: flex; */
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position: fixed;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 600px;
+          background-color: lightslategrey;
+          border-radius: 5px;
+          height: 200px;
+      }
+      .popup h3{
+          
+          font-family: 'Roboto';
+          color: white;
+          font-size: 24px;
+          text-transform: uppercase;
+      }
+      .popup-body{
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          width: 80%;
+          padding: 20px;
+      }
+      .popup input{
+          width: 90%;
+          height: 30px;
+      }
+      .popup button{
+          width: 30%;
+          display: inline-block;
+          padding: 9px 2px;
+          margin: 20px;
+          height: 35px;
+          line-height: 16px;
+          border-radius: 5px;
+          text-transform: uppercase;
+          font-size: 12px;
+         margin: 20px;
+         
+      }
+    </style>
+</head>
+<body>
+    <div class="todo">
+        <div class="header">
+            <h1>To do list</h1>
+           <input class="dod" type="text" placeholder="Wpisz treśc zadania"> 
+
+           <button class="add">add</button>
+
+        </div>
+        <div class="list">
+            <h1>Lista zadań</h1>
+            <p class="error">Wpisz zadanie!</p>
+            
+            <ul>
+<!-- <li class="test1">Wypić kawę<div class="tools"><button class="complete"><i class="fas fa-check"></i></button>
+<button class="edit">EDIT</button>
+<button class="delete"><i class="fas fa-times"></i></button>
+</div></li>
+<li class="test2">Zrobić obiad<div class="tools"><button class="complete"><i class="fas fa-check"></i></button>
+    <button class="edit">EDIT</button>
+    <button class="delete"><i class="fas fa-times"></i></button>
+    </div></li>
+    <li class="test3">Sprzątać<div class="tools"><button class="complete"><i class="fas fa-check"></i></button>
+        <button class="edit">EDIT</button>
+        <button class="delete"><i class="fas fa-times"></i></button>
+        </div></li> --> 
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="popup">
+<h3 class="popup-text">Edytuj zadanie</h3>
+<div class="popup-body">
+    <p class="popup-info"></p>
+    <input type="text" class="popup-tresc" placeholder="Podaj nową treść zadania">
+    <button class="zgoda">Zatwirdz</button>
+    <button class="ann">Anuluj</button>
+</div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
