@@ -1,3 +1,3 @@
 # todo-list
 
-![Alt text](./img1.png)
+![Alt text](img1.png)
